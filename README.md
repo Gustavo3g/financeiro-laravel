@@ -21,7 +21,7 @@ $ docker exec -it (nome da aplicação laravel rodando no docker) bash
 ```
 ## EDITE O ARQUIVO DE CONFIGURAÇÃO
 ```
-nano /etc/nginx/conf.d/default.conf
+$ nano /etc/nginx/conf.d/default.conf
 ```
 
 Procure pelo seguinte trecho:
@@ -43,7 +43,10 @@ location / {
 ```
 ## RUN 
 ```
-service nginx restart
+$ service nginx restart
+```
+```
+$ php artisan migrate
 ```
 
 
@@ -51,7 +54,8 @@ service nginx restart
 ## Diagrama Entidade e Relacionamento
 ![alt text](https://github.com/Gustavo3g/financeiro-laravel-docker/blob/main/.imgsReadme/der-project.png)
 
-## Documentation
+## DOCUMENTAÇÃO
+[Acessar Documentação](https://www.notion.so/DOCUMENTA-O-f0786a65deb54523af4d2a384bf90b92)
 
 # /users
 # GET
