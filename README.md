@@ -49,7 +49,7 @@ service nginx restart
 
 
 ## Diagrama Entidade e Relacionamento
-![alt text](https://github.com/Gustavo3g/financeiro-laravel-docker/blob/main/.imgsReadme/der-project.png)
+![alt text](https://github.com/Gustavo3g/financeiro-laravel/blob/main/.imgsReadme/der-project.png)
 
 ## Documentation
 
@@ -66,6 +66,6 @@ service nginx restart
 
 # /rollback-transaction
 
-#POST
+# POST
 ![alt text](https://github.com/Gustavo3g/financeiro-laravel/blob/main/.imgsReadme/post-rollback.png)
 
