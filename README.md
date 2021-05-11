@@ -57,19 +57,22 @@ $ php artisan migrate
 ## DOCUMENTAÇÃO
 [Acessar Documentação](https://www.notion.so/DOCUMENTA-O-f0786a65deb54523af4d2a384bf90b92)
 
-# /users
+
 # GET
+### /users
 ![alt text](https://github.com/Gustavo3g/financeiro-laravel/blob/main/.imgsReadme/get-users.png)
 # POST
 ![alt text](https://github.com/Gustavo3g/financeiro-laravel/blob/main/.imgsReadme/post-users.png)
 
-# /transaction
 
 # POST
+### /transaction
 ![alt text](https://github.com/Gustavo3g/financeiro-laravel/blob/main/.imgsReadme/post-transaction.png)
 
-# /rollback-transaction
+
 
 # POST
+### /rollback-transaction
 ![alt text](https://github.com/Gustavo3g/financeiro-laravel/blob/main/.imgsReadme/post-rollback.png)
 
+ 
