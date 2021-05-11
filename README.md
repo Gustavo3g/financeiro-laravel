@@ -62,6 +62,7 @@ $ php artisan migrate
 ### /users
 ![alt text](https://github.com/Gustavo3g/financeiro-laravel/blob/main/.imgsReadme/get-users.png)
 # POST
+### /users
 ![alt text](https://github.com/Gustavo3g/financeiro-laravel/blob/main/.imgsReadme/post-users.png)
 
 
