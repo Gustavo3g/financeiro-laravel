@@ -56,6 +56,11 @@ class UserController extends Controller
                 ]);
             } else {
                 DB::rollBack();
+
+                return response()->json([
+                    'success' => true,
+                    'msg' => 'Unable to register user'
+                ]);
             }
 
         } catch (\Exception $e){

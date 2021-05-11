@@ -53,17 +53,20 @@ class TransactionService
             $this->objTransaction->create($transactionData);
 
 
-            if (!$updatedPayee && !$updatedPayer)
+            if (!$updatedPayee || !$updatedPayer)
             {
                 DB::rollBack();
-                return true;
+                return false;
             }
 
             DB::commit();
             return true;
 
         } catch (\Exception $e){
-            return $e;
+            return response()->json([
+                'success' => false,
+                'message' => 'It was not possible to make the transfer'
+            ], 500);
         }
     }
 }
