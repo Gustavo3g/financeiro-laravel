@@ -59,21 +59,58 @@ $ php artisan migrate
 
 
 # GET
-### /users
-![alt text](https://github.com/Gustavo3g/financeiro-laravel/blob/main/.imgsReadme/get-users.png)
+## api/users
+
+```json
+{
+    "id": 4,
+    "full_name": "Gustavo Barros de Sousa",
+    "email": "cliente@teste.com",
+    "cpf": "604183454d32",
+    "shopkeeper": 0,
+    "created_at": "2021-05-11T17:46:05.000000Z",
+    "updated_at": "2021-05-11T17:46:05.000000Z",
+    "wallet": {
+      "id": 4,
+      "balance": "530.47",
+      "user_id": 4,
+      "created_at": "2021-05-11T17:46:05.000000Z",
+      "updated_at": "2021-05-11T17:49:03.000000Z"
+    }
+  }
+```
+
 # POST
-### /users
-![alt text](https://github.com/Gustavo3g/financeiro-laravel/blob/main/.imgsReadme/post-users.png)
+## api/users
+```json
+{
+	"full_name": "Gustavo Barros de Sousa",
+	"cpf": "06906906934",
+	"email": "cliente@teste.com",
+	"password": "senhasecreta"
+}
+```
+
 
 
 # POST
-### /transaction
-![alt text](https://github.com/Gustavo3g/financeiro-laravel/blob/main/.imgsReadme/post-transaction.png)
+### api/transaction
+```json
+{
+    "value" : 35.00,
+    "payer" : 5,
+    "payee" : 4
+}
+```
 
 
 
 # POST
-### /rollback-transaction
-![alt text](https://github.com/Gustavo3g/financeiro-laravel/blob/main/.imgsReadme/post-rollback.png)
+## api/rollback-transaction
+```json
+{
+    "id_transaction" : 1 // id da transação
+}
+```
 
  
