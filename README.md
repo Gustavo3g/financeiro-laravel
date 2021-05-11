@@ -52,7 +52,7 @@ $ php artisan migrate
 
 
 ## Diagrama Entidade e Relacionamento
-![alt text](https://github.com/Gustavo3g/financeiro-laravel-docker/blob/main/.imgsReadme/der-project.png)
+![alt text](https://github.com/Gustavo3g/financeiro-laravel/blob/main/.imgsReadme/der-project.png)
 
 ## DOCUMENTAÇÃO
 [Acessar Documentação](https://www.notion.so/DOCUMENTA-O-f0786a65deb54523af4d2a384bf90b92)
@@ -70,6 +70,6 @@ $ php artisan migrate
 
 # /rollback-transaction
 
-#POST
+# POST
 ![alt text](https://github.com/Gustavo3g/financeiro-laravel/blob/main/.imgsReadme/post-rollback.png)
 
