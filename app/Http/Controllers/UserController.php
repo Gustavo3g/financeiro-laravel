@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\ValidateHelpers;
 use App\Models\User;
 use App\Services\CreateUserService;
 use App\Services\CreateWalletService;
@@ -14,15 +15,18 @@ class UserController extends Controller
     private $objCreate;
     private $verifyService;
     private $objWallet;
+    private $validate;
 
     public function __construct
     (CreateUserService $createUserService,
      VerifyService $verifyService,
-     CreateWalletService $walletService)
+     CreateWalletService $walletService,
+    ValidateHelpers $validateHelpers)
     {
         $this->objCreate = $createUserService;
         $this->verifyService = $verifyService;
         $this->objWallet = $walletService;
+        $this->validate = $validateHelpers;
     }
 
     public function register(Request $request) {
@@ -30,6 +34,17 @@ class UserController extends Controller
 
         try
         {
+            $required = ['full_name','cpf', 'email', 'password'];
+
+            $validate = $this->validate->required($required,$request);
+
+            if($validate != false)
+            {
+                return response()->json([
+                    'success' => false,
+                    'message' => $validate.' is required.'
+                ], 422);
+            }
 
             DB::beginTransaction();
 

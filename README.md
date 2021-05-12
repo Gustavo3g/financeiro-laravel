@@ -49,6 +49,12 @@ $ service nginx restart
 $ php artisan migrate
 ```
 
+## TESTS
+```
+$ docker exec -it (nome da aplicação laravel rodando no docker) bash
+
+$ php artisan test
+```
 
 
 ## Diagrama Entidade e Relacionamento

@@ -3,16 +3,18 @@
 
 namespace App\Services;
 
+use App\Helpers\ValidateHelpers;
 use App\Models\User;
 
 class CreateUserService
 {
     private $objUser;
-    private $objWallet;
+    private $validate;
 
-    public function __construct()
+    public function __construct(User $objUser, ValidateHelpers $validateHelpers)
     {
-        $this->objUser = new User();
+        $this->objUser = $objUser;
+        $this->validate = $validateHelpers;
 
     }
 

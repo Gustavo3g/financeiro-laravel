@@ -9,9 +9,8 @@ use Tests\TestCase;
 class TransactionTest extends TestCase
 {
     /**
-     * A basic feature test example.
+     * Transação
      *
-     * @return void
      */
     public function test_transaction()
     {
@@ -23,5 +22,26 @@ class TransactionTest extends TestCase
 
         $this->postJson('/api/transaction', $data_payload)
             ->assertStatus(200);
+    }
+
+    /**
+     * Verifica se o valor é maior que 0.00
+     *
+     */
+    public function test_transaction_value()
+    {
+        $data_payload = [
+            'value' => '0.00',
+            'payer' => '1',
+            'payee' => '2',
+        ];
+
+        $this->postJson('/api/transaction', $data_payload)
+            ->assertStatus(400)
+            ->assertJson(
+                [
+                    'message' => 'Minimum for transaction is 0.01 R$'
+                ]
+            );
     }
 }
