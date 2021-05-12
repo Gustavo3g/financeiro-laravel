@@ -53,7 +53,7 @@ class UserController extends Controller
                 return response()->json([
                     'success' => true,
                     'msg' => 'User created successfully'
-                ]);
+                ],201);
             } else {
                 DB::rollBack();
 
@@ -73,6 +73,7 @@ class UserController extends Controller
     }
 
     public function list(){
+
         return User::with('wallet')->get();
     }
 }
