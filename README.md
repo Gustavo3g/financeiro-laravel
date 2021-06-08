@@ -13,42 +13,6 @@ $ docker exec -it (nome da aplicação laravel rodando no docker) bash
 $ php artisan migrate
 ```
 
-## CONFIG
-```
-$ docker ps
-
-$ docker exec -it (nome da aplicação laravel rodando no docker) bash
-```
-## EDITE O ARQUIVO DE CONFIGURAÇÃO
-```
-$ nano /etc/nginx/conf.d/default.conf
-```
-
-Procure pelo seguinte trecho:
-```
-location / {
-        # First attempt to serve request as file, then
-        # as directory, then fall back to index.php
-        try_files $uri $uri/ /index.php?$query_string $uri/index.html;
-    }
-```
-Substitua pelo seguinte trecho:
-
-```
-location / {
-        # First attempt to serve request as file, then
-        # as directory, then fall back to index.html
-        try_files $uri $uri/ /index.php?$args;
-    }
-```
-## RUN 
-```
-$ service nginx restart
-```
-```
-$ php artisan migrate
-```
-
 ## TESTS
 ```
 $ docker exec -it (nome da aplicação laravel rodando no docker) bash
